@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-27T15:59:42",
+    "python_version": "3.14.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "results": [
+    {
+      "scenario_name": "spbu_small",
+      "url": "https://spbu.ru",
+      "max_pages": 10,
+      "max_depth": 1,
+      "delay": 0.5,
+      "processed_pages": 10,
+      "successful_pages": 10,
+      "error_pages": 0,
+      "total_links_found": 1868,
+      "internal_links_total": 1383,
+      "external_links_total": 485,
+      "unique_internal_links": 460,
+      "unique_external_links": 89,
+      "unique_external_resources": 52,
+      "unique_file_links_doc_docx_pdf": 11,
+      "pages_with_text": 10,
+      "total_text_length": 146854,
+      "execution_time_seconds": 18.908,
+      "peak_memory_mb": 9.592,
+      "comment": "Выполнено успешно."
+    },
+    {
+      "scenario_name": "spbu_medium",
+      "url": "https://spbu.ru",
+      "max_pages": 30,
+      "max_depth": 2,
+      "delay": 0.5,
+      "processed_pages": 30,
+      "successful_pages": 30,
+      "error_pages": 0,
+      "total_links_found": 5462,
+      "internal_links_total": 3934,
+      "external_links_total": 1528,
+      "unique_internal_links": 921,
+      "unique_external_links": 206,
+      "unique_external_resources": 80,
+      "unique_file_links_doc_docx_pdf": 16,
+      "pages_with_text": 30,
+      "total_text_length": 346980,
+      "execution_time_seconds": 78.513,
+      "peak_memory_mb": 20.045,
+      "comment": "Выполнено успешно."
+    }
+  ]
+}

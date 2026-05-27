@@ -123,7 +123,17 @@ def test_crawler_handles_error_page() -> None:
 
     assert bad_page.status_code == 500
     assert bad_page.error == "HTTP status 500"
+    assert bad_page.text == ""
     assert bad_page.internal_links == []
+
+
+def test_crawler_saves_extracted_page_text() -> None:
+    fake_fetcher = FakeFetcher(make_fake_pages())
+    config = CrawlerConfig(start_url="https://example.com", max_pages=1, max_depth=0, delay=0)
+
+    pages = WebCrawler(config, fetcher=fake_fetcher).crawl()
+
+    assert pages[0].text == "Home\nA\nB\nExternal"
 
 
 def test_crawler_saves_page_depth() -> None:
@@ -137,4 +147,3 @@ def test_crawler_saves_page_depth() -> None:
     assert depths["https://example.com/a"] == 1
     assert depths["https://example.com/b"] == 1
     assert depths["https://example.com/c"] == 2
-

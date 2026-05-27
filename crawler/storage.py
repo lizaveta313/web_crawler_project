@@ -31,6 +31,7 @@ class ResultStorage:
             "status_code",
             "title",
             "depth",
+            "text",
             "internal_links",
             "external_links",
             "internal_link_count",
@@ -49,6 +50,7 @@ class ResultStorage:
                         "status_code": page.status_code,
                         "title": page.title,
                         "depth": page.depth,
+                        "text": page.text,
                         "internal_links": "; ".join(page.internal_links),
                         "external_links": "; ".join(page.external_links),
                         "internal_link_count": page.internal_link_count,
@@ -69,4 +71,3 @@ class ResultStorage:
     def _ensure_output_dir(self) -> Path:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         return self.output_dir
-

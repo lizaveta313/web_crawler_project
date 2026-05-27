@@ -1,0 +1,3 @@
+﻿scenario_name,url,max_pages,max_depth,delay,processed_pages,successful_pages,error_pages,total_links_found,internal_links_total,external_links_total,unique_internal_links,unique_external_links,unique_external_resources,unique_file_links_doc_docx_pdf,pages_with_text,total_text_length,execution_time_seconds,peak_memory_mb,comment
+spbu_small,https://spbu.ru,10,1,0.5,10,10,0,1868,1383,485,460,89,52,11,10,146854,18.908,9.592,Выполнено успешно.
+spbu_medium,https://spbu.ru,30,2,0.5,30,30,0,5462,3934,1528,921,206,80,16,30,346980,78.513,20.045,Выполнено успешно.

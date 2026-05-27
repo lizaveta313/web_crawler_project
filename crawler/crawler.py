@@ -75,6 +75,7 @@ class WebCrawler:
                 status_code=fetch_result.status_code,
                 title="",
                 depth=depth,
+                text="",
                 internal_links=[],
                 external_links=[],
                 error=fetch_result.error or "Empty response body",
@@ -86,8 +87,8 @@ class WebCrawler:
             status_code=fetch_result.status_code,
             title=parsed.title,
             depth=depth,
+            text=parsed.text,
             internal_links=parsed.internal_links,
             external_links=parsed.external_links,
             error=None,
         )
-

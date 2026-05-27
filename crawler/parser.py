@@ -13,6 +13,7 @@ class HtmlParser:
         """Parse HTML and return title, internal links, and external links."""
         soup = BeautifulSoup(html, "html.parser")
         title = self._extract_title(soup)
+        text = self._extract_text(soup)
 
         internal_links: list[str] = []
         external_links: list[str] = []
@@ -29,6 +30,7 @@ class HtmlParser:
 
         return ParsedPage(
             title=title,
+            text=text,
             internal_links=unique_preserve_order(internal_links),
             external_links=unique_preserve_order(external_links),
         )
@@ -39,3 +41,10 @@ class HtmlParser:
             return ""
         return soup.title.string.strip()
 
+    @staticmethod
+    def _extract_text(soup: BeautifulSoup) -> str:
+        for tag in soup(["script", "style", "noscript"]):
+            tag.decompose()
+
+        lines = (line.strip() for line in soup.get_text(separator="\n").splitlines())
+        return "\n".join(line for line in lines if line)

@@ -53,3 +53,27 @@ def test_handles_html_without_title() -> None:
     assert parsed.title == ""
     assert parsed.internal_links == ["https://example.com/about"]
 
+
+def test_extracts_clean_text_without_scripts_styles_and_empty_lines() -> None:
+    html = """
+    <html>
+      <head>
+        <title>Text page</title>
+        <style>.hidden { display: none; }</style>
+        <script>console.log("skip");</script>
+      </head>
+      <body>
+        <noscript>Skip noscript</noscript>
+        <h1> Main heading </h1>
+        <p> First paragraph. </p>
+        <p>Second paragraph.</p>
+      </body>
+    </html>
+    """
+
+    parsed = HtmlParser().parse(html, "https://example.com/", "https://example.com/")
+
+    assert "console.log" not in parsed.text
+    assert ".hidden" not in parsed.text
+    assert "Skip noscript" not in parsed.text
+    assert parsed.text == "Text page\nMain heading\nFirst paragraph.\nSecond paragraph."

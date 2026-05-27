@@ -19,6 +19,7 @@ class ParsedPage:
     """Structured data extracted from an HTML page."""
 
     title: str
+    text: str = ""
     internal_links: list[str] = field(default_factory=list)
     external_links: list[str] = field(default_factory=list)
 
@@ -31,6 +32,7 @@ class PageData:
     status_code: int | None
     title: str
     depth: int
+    text: str = ""
     internal_links: list[str] = field(default_factory=list)
     external_links: list[str] = field(default_factory=list)
     error: str | None = None
@@ -62,4 +64,3 @@ class PageData:
         data["external_link_count"] = self.external_link_count
         data["total_link_count"] = self.total_link_count
         return data
-

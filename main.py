@@ -49,12 +49,13 @@ def main() -> None:
     report_json = storage.save_report_json(report)
 
     print("Crawl finished")
-    print(f"Processed pages: {report['total_pages']}")
+    print(f"Processed pages: {report['total_pages_processed']}")
     print(f"Successful pages: {report['successful_pages']}")
     print(f"Pages with errors: {report['error_pages']}")
-    print(f"Total links found: {report['total_links']}")
-    print(f"Internal links: {report['internal_links']}")
-    print(f"External links: {report['external_links']}")
+    print(f"Total links found: {report['total_links_found']}")
+    print(f"Internal links: {report['internal_links_total']}")
+    print(f"External links: {report['external_links_total']}")
+    print(f"Pages with text: {report['pages_with_text']}")
     print(f"Saved: {pages_json}")
     print(f"Saved: {pages_csv}")
     print(f"Saved: {report_json}")
@@ -62,4 +63,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
