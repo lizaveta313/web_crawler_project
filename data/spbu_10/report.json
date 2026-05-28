@@ -1,0 +1,60 @@
+{
+  "total_pages_processed": 10,
+  "successful_pages": 10,
+  "error_pages": 0,
+  "total_links_found": 1868,
+  "internal_links_total": 1383,
+  "external_links_total": 485,
+  "unique_internal_links": 460,
+  "unique_external_links": 89,
+  "unique_external_resources": 52,
+  "unique_file_links_doc_docx_pdf": 11,
+  "pages_with_text": 10,
+  "total_text_length": 146896,
+  "total_pages": 10,
+  "total_links": 1868,
+  "internal_links": 1383,
+  "external_links": 485,
+  "top_5_pages_by_links": [
+    {
+      "url": "https://spbu.ru/openuniversity/documents",
+      "title": "Документы | Санкт-Петербургский государственный университет",
+      "depth": 1,
+      "total_link_count": 271,
+      "internal_link_count": 227,
+      "external_link_count": 44
+    },
+    {
+      "url": "https://spbu.ru/openuniversity/protivodeystvie-korrupcii",
+      "title": "Противодействие коррупции | Санкт-Петербургский государственный университет",
+      "depth": 1,
+      "total_link_count": 261,
+      "internal_link_count": 195,
+      "external_link_count": 66
+    },
+    {
+      "url": "https://spbu.ru/",
+      "title": "Главная | Санкт-Петербургский государственный университет",
+      "depth": 0,
+      "total_link_count": 202,
+      "internal_link_count": 151,
+      "external_link_count": 51
+    },
+    {
+      "url": "https://spbu.ru/sveden",
+      "title": "Основные сведения | Санкт-Петербургский государственный университет",
+      "depth": 1,
+      "total_link_count": 179,
+      "internal_link_count": 130,
+      "external_link_count": 49
+    },
+    {
+      "url": "https://spbu.ru/openuniversity/documents/52",
+      "title": "Ректорские совещания | Санкт-Петербургский государственный университет",
+      "depth": 1,
+      "total_link_count": 170,
+      "internal_link_count": 126,
+      "external_link_count": 44
+    }
+  ]
+}

@@ -2,7 +2,6 @@
 
 from collections import deque
 from time import sleep
-from typing import Protocol
 
 from crawler.config import CrawlerConfig
 from crawler.fetcher import Fetcher
@@ -11,20 +10,13 @@ from crawler.parser import HtmlParser
 from crawler.url_utils import normalize_url
 
 
-class FetcherProtocol(Protocol):
-    """Small protocol used to make tests independent from real networking."""
-
-    def fetch(self, url: str) -> FetchResult:
-        """Fetch a URL and return a structured result."""
-
-
 class WebCrawler:
     """A simple BFS crawler for educational Web 1.0-style crawling."""
 
     def __init__(
         self,
         config: CrawlerConfig,
-        fetcher: FetcherProtocol | None = None,
+        fetcher: Fetcher | None = None,
         parser: HtmlParser | None = None,
     ) -> None:
         self.config = config

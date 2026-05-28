@@ -1,0 +1,60 @@
+{
+  "total_pages_processed": 2161,
+  "successful_pages": 2140,
+  "error_pages": 21,
+  "total_links_found": 319075,
+  "internal_links_total": 218169,
+  "external_links_total": 100906,
+  "unique_internal_links": 11185,
+  "unique_external_links": 13903,
+  "unique_external_resources": 2148,
+  "unique_file_links_doc_docx_pdf": 662,
+  "pages_with_text": 2140,
+  "total_text_length": 128478234,
+  "total_pages": 2161,
+  "total_links": 319075,
+  "internal_links": 218169,
+  "external_links": 100906,
+  "top_5_pages_by_links": [
+    {
+      "url": "https://spbu.ru/sveden/education",
+      "title": "Образование | Санкт-Петербургский государственный университет",
+      "depth": 2,
+      "total_link_count": 10531,
+      "internal_link_count": 128,
+      "external_link_count": 10403
+    },
+    {
+      "url": "https://spbu.ru/openuniversity/documents/rabotodateli-partnery-spbgu",
+      "title": "Работодатели-партнеры СПбГУ | Санкт-Петербургский государственный университет",
+      "depth": 2,
+      "total_link_count": 1759,
+      "internal_link_count": 175,
+      "external_link_count": 1584
+    },
+    {
+      "url": "https://spbu.ru/sveden/employees",
+      "title": "Педагогический состав | Санкт-Петербургский государственный университет",
+      "depth": 2,
+      "total_link_count": 911,
+      "internal_link_count": 866,
+      "external_link_count": 45
+    },
+    {
+      "url": "https://spbu.ru/postupayushchim/programms/dopolnitelnyeprogrammy?view=table",
+      "title": "Дополнительные программы | Санкт-Петербургский государственный университет",
+      "depth": 2,
+      "total_link_count": 613,
+      "internal_link_count": 568,
+      "external_link_count": 45
+    },
+    {
+      "url": "https://spbu.ru/universitet/podrazdeleniya-i-rukovodstvo/sovety-obrazovatelnykh-programm",
+      "title": "Советы образовательных программ | Санкт-Петербургский государственный университет",
+      "depth": 2,
+      "total_link_count": 526,
+      "internal_link_count": 482,
+      "external_link_count": 44
+    }
+  ]
+}

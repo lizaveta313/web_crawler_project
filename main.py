@@ -22,7 +22,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--respect-robots",
         action="store_true",
-        help="Check robots.txt before fetching pages. Disabled by default for predictable educational runs.",
+        help="Check robots.txt before fetching pages.",
     )
     return parser.parse_args()
 

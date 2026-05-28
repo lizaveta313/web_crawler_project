@@ -39,22 +39,18 @@ class PageData:
 
     @property
     def internal_link_count(self) -> int:
-        """Return the number of internal links found on the page."""
         return len(self.internal_links)
 
     @property
     def external_link_count(self) -> int:
-        """Return the number of external links found on the page."""
         return len(self.external_links)
 
     @property
     def total_link_count(self) -> int:
-        """Return the total number of links found on the page."""
         return self.internal_link_count + self.external_link_count
 
     @property
     def is_successful(self) -> bool:
-        """Return True if the page was fetched without errors."""
         return self.error is None and self.status_code is not None and 200 <= self.status_code < 300
 
     def to_dict(self) -> dict[str, Any]:

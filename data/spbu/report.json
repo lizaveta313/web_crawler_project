@@ -1,0 +1,60 @@
+{
+  "total_pages_processed": 50,
+  "successful_pages": 50,
+  "error_pages": 0,
+  "total_links_found": 8678,
+  "internal_links_total": 6160,
+  "external_links_total": 2518,
+  "unique_internal_links": 1187,
+  "unique_external_links": 327,
+  "unique_external_resources": 138,
+  "unique_file_links_doc_docx_pdf": 21,
+  "pages_with_text": 50,
+  "total_text_length": 559357,
+  "total_pages": 50,
+  "total_links": 8678,
+  "internal_links": 6160,
+  "external_links": 2518,
+  "top_5_pages_by_links": [
+    {
+      "url": "https://spbu.ru/openuniversity/documents",
+      "title": "Документы | Санкт-Петербургский государственный университет",
+      "depth": 1,
+      "total_link_count": 271,
+      "internal_link_count": 227,
+      "external_link_count": 44
+    },
+    {
+      "url": "https://spbu.ru/postupayushchim/programms",
+      "title": "Образовательные программы. Бакалавриат и специалитет | Санкт-Петербургский государственный университет",
+      "depth": 1,
+      "total_link_count": 270,
+      "internal_link_count": 224,
+      "external_link_count": 46
+    },
+    {
+      "url": "https://spbu.ru/openuniversity/protivodeystvie-korrupcii",
+      "title": "Противодействие коррупции | Санкт-Петербургский государственный университет",
+      "depth": 1,
+      "total_link_count": 261,
+      "internal_link_count": 195,
+      "external_link_count": 66
+    },
+    {
+      "url": "https://spbu.ru/universitet/uchebno-nauchnye-podrazdeleniya",
+      "title": "Учебно-научные подразделения | Санкт-Петербургский государственный университет",
+      "depth": 1,
+      "total_link_count": 231,
+      "internal_link_count": 131,
+      "external_link_count": 100
+    },
+    {
+      "url": "https://spbu.ru/postupayushchim/podgotovka-k-ege",
+      "title": "Подготовка к ЕГЭ | Санкт-Петербургский государственный университет",
+      "depth": 1,
+      "total_link_count": 215,
+      "internal_link_count": 140,
+      "external_link_count": 75
+    }
+  ]
+}

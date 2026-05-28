@@ -1,0 +1,11 @@
+{
+  "spbu": {
+    "source_file": "data/spbu/pages.json",
+    "documents_file": "data/module3/spbu_documents.jsonl",
+    "small_documents_file": "data/module3/spbu_documents_small.jsonl",
+    "total_pages_read": 50,
+    "documents_saved": 50,
+    "skipped_pages": 0,
+    "total_text_length": 559357
+  }
+}
