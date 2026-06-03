@@ -5,6 +5,34 @@ from urllib.parse import ParseResult, urldefrag, urljoin, urlparse, urlunparse
 
 IGNORED_SCHEMES = {"mailto", "tel", "javascript"}
 ALLOWED_SCHEMES = {"http", "https"}
+IGNORED_FILE_EXTENSIONS = {
+    ".7z",
+    ".avi",
+    ".bmp",
+    ".csv",
+    ".doc",
+    ".docx",
+    ".gif",
+    ".ico",
+    ".jpeg",
+    ".jpg",
+    ".json",
+    ".mp3",
+    ".mp4",
+    ".pdf",
+    ".png",
+    ".ppt",
+    ".pptx",
+    ".rar",
+    ".rss",
+    ".svg",
+    ".txt",
+    ".webp",
+    ".xls",
+    ".xlsx",
+    ".xml",
+    ".zip",
+}
 
 
 def should_ignore_href(href: str | None) -> bool:
@@ -17,7 +45,7 @@ def should_ignore_href(href: str | None) -> bool:
         return True
 
     parsed = urlparse(href)
-    return parsed.scheme.lower() in IGNORED_SCHEMES
+    return parsed.scheme.lower() in IGNORED_SCHEMES or _has_ignored_file_extension(parsed.path)
 
 
 def normalize_url(base_url: str, href: str | None) -> str | None:
@@ -63,6 +91,11 @@ def unique_preserve_order(urls: list[str]) -> list[str]:
     return result
 
 
+def _has_ignored_file_extension(path: str) -> bool:
+    lower_path = path.lower()
+    return any(lower_path.endswith(extension) for extension in IGNORED_FILE_EXTENSIONS)
+
+
 def _normalize_parsed_url(parsed: ParseResult) -> ParseResult:
     path = parsed.path or "/"
     scheme = parsed.scheme.lower()
@@ -79,4 +112,3 @@ def _normalize_parsed_url(parsed: ParseResult) -> ParseResult:
 
 def _normalized_netloc(parsed: ParseResult) -> str:
     return _normalize_parsed_url(parsed).netloc
-

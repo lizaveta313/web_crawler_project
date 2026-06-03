@@ -18,6 +18,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-pages", type=int, default=20, help="Maximum number of pages to process.")
     parser.add_argument("--max-depth", type=int, default=2, help="Maximum BFS depth.")
     parser.add_argument("--delay", type=float, default=0.5, help="Delay between requests in seconds.")
+    parser.add_argument("--workers", type=int, default=1, help="Number of parallel page fetch workers.")
     parser.add_argument("--output-dir", default="data", help="Directory for pages.json, pages.csv and report.json.")
     parser.add_argument(
         "--respect-robots",
@@ -35,6 +36,7 @@ def main() -> None:
         max_pages=args.max_pages,
         max_depth=args.max_depth,
         delay=args.delay,
+        workers=args.workers,
         output_dir=Path(args.output_dir),
         respect_robots=args.respect_robots,
     )

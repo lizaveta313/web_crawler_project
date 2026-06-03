@@ -102,6 +102,22 @@ def test_crawler_does_not_visit_same_url_twice() -> None:
     assert fake_fetcher.fetched_urls.count("https://example.com/c") == 1
 
 
+def test_crawler_parallel_fetches_pages_without_duplicates() -> None:
+    fake_fetcher = FakeFetcher(make_fake_pages())
+    config = CrawlerConfig(start_url="https://example.com", max_pages=10, max_depth=2, delay=0, workers=2)
+
+    pages = WebCrawler(config, fetcher=fake_fetcher).crawl()
+
+    assert {page.url for page in pages} == {
+        "https://example.com/",
+        "https://example.com/a",
+        "https://example.com/b",
+        "https://example.com/c",
+    }
+    assert fake_fetcher.fetched_urls.count("https://example.com/b") == 1
+    assert fake_fetcher.fetched_urls.count("https://example.com/c") == 1
+
+
 def test_crawler_handles_error_page() -> None:
     pages = make_fake_pages()
     pages["https://example.com/"] = FetchResult(
